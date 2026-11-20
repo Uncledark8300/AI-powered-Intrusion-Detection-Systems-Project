@@ -1,0 +1,10 @@
+{
+    "monitored_paths": [],
+    "excluded_paths": [
+        "C:\\Windows\\Temp"
+    ],
+    "check_interval": 30,
+    "hash_algorithm": "sha256",
+    "alert_threshold": "High",
+    "log_retention_days": 30
+}
