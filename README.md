@@ -1,8 +1,8 @@
-#  PyHIDS — Advanced Host Intrusion Detection System
+#  HIDS — AI-powered Intrusion Detection Systems
 
-PyHIDS is an advanced, hybrid **Host-based Intrusion Detection System (HIDS)** designed using Python, integrating signature-based **File Integrity Monitoring (FIM)** with anomaly-based **Machine Learning (ML)** detection.
+HIDS is an advanced, hybrid **Host-based Intrusion Detection System (HIDS)** designed using Python, integrating signature-based **File Integrity Monitoring (FIM)** with anomaly-based **Machine Learning (ML)** detection.
 
-Inspired by industry-standard tools like **OSSEC** and **Tripwire**, PyHIDS adds modern machine learning techniques to detect zero-day and anomalous system-call patterns. It demonstrates sophisticated techniques for real-time file system monitoring, cryptographic baseline creation, and behavioural analysis.
+Inspired by industry-standard tools like **OSSEC** and **Tripwire**, HIDS adds modern machine learning techniques to detect zero-day and anomalous system-call patterns. It demonstrates sophisticated techniques for real-time file system monitoring, cryptographic baseline creation, and behavioural analysis.
 
 The system leverages the **XGBoost** algorithm, **n-gram** feature extraction, and the **Watchdog** library to detect unauthorised modifications and malicious system call sequences with minimal performance impact.
 
@@ -23,7 +23,7 @@ The system leverages the **XGBoost** algorithm, **n-gram** feature extraction, a
 
 ### 3. Machine Learning Engine
 - **XGBoost** classifier trained on system call sequences to detect anomalous behaviour.
-- `CountVectorizer` for **2–4 n-gram** feature extraction from system call logs.
+- `CountVectorizer` for **2–4-gram ** feature extraction from system call logs.
 - **SMOTE** (Synthetic Minority Over-sampling Technique) to handle class imbalance.
 - **GridSearchCV** for hyperparameter optimisation to maximise accuracy and reduce false positives.
 
@@ -63,11 +63,11 @@ Initialises the Tkinter GUI and orchestrates all subsystems. Loads hids_config.j
 ---
 ## MLIntrusionDetector
 - Model Training: End-to-end ML pipeline — loading system call sequences, n-gram feature extraction, SMOTE balancing, and GridSearchCV tuning. Evaluated on the ADFA-LD dataset with 97.42% classification accuracy.
-- Prediction: Evaluates incoming sequences (e.g., ptrace mmap execve chroot). Severity based on probability thresholds (>0.8 = Critical, >0.6 = High).
+- Prediction: Evaluates incoming sequences (e.g., ptrace, mmap, execve, chroot). Severity based on probability thresholds (>0.8 = Critical, >0.6 = High).
 - Demo Mode: Generates realistic demo data and trains a lightweight model on the fly — test the system immediately without external training data.
 
 ## AlertManager
-- Aggregates alerts, assigns sequential IDs, updates the GUI.
+- Aggregates alerts, assigns sequential IDs, and updates the GUI.
 - Logs everything to security_alerts.log with timestamps, severity, paths, and descriptions.
 - Triggers desktop pop-up notifications for Critical/High alerts.
 ---
