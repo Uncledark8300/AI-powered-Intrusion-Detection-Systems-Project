@@ -1,8 +1,8 @@
-#  HIDS — AI-powered Intrusion Detection Systems
+#  AI-powered Intrusion Detection Systems — HIDS
 
-HIDS is an advanced, hybrid **Host-based Intrusion Detection System (HIDS)** designed using Python, integrating signature-based **File Integrity Monitoring (FIM)** with anomaly-based **Machine Learning (ML)** detection.
+AI-powered Intrusion Detection Systems is an advanced, hybrid **Host-based Intrusion Detection System (HIDS)** designed using Python, integrating signature-based **File Integrity Monitoring (FIM)** with anomaly-based **Machine Learning (ML)** detection.
 
-Inspired by industry-standard tools like **OSSEC** and **Tripwire**, HIDS adds modern machine learning techniques to detect zero-day and anomalous system-call patterns. It demonstrates sophisticated techniques for real-time file system monitoring, cryptographic baseline creation, and behavioural analysis.
+Inspired by industry-standard tools like **OSSEC** and **Tripwire**, HIDS adds modern machine learning techniques To detect any suspicious activity and anomalous system-call patterns. It demonstrates sophisticated techniques for real-time file system monitoring, cryptographic baseline creation, and behavioural analysis.
 
 The system leverages the **XGBoost** algorithm, **n-gram** feature extraction, and the **Watchdog** library to detect unauthorised modifications and malicious system call sequences with minimal performance impact.
 
