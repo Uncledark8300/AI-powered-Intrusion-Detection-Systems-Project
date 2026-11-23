@@ -49,6 +49,7 @@ The system leverages the **XGBoost** algorithm, **n-gram** feature extraction, a
 | Data Processing & Visualisation | Pandas, NumPy, Matplotlib, Seaborn |
 | Utilities | Joblib (model serialization), Hashlib (SHA-256), JSON, Logging |
 | Testing Environment | VirtualBox / VMware (isolated testing) |
+| OS| Ubuntu
 
 ---
 ## Core Components
