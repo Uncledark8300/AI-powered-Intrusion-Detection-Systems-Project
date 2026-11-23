@@ -1,21 +1,29 @@
-MIT License
+MIT License 
 
-Copyright (c) 2026 uncle
+Copyright (c) 2026 Uncle
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+in the Software, ONLY FOR THE FOLLOWING CONDITIONS:
+    - Academic cybersecurity research and Host-based Intrusion Detection (HIDS) development
+    - Security defence, file integrity monitoring (FIM), and anomaly detection testing
+    - Educational and training environments for endpoint security and ML-based threat detection
+    - Authorised system administration and security telemetry monitoring
+    - Machine learning research for system call analysis and behavioural profiling
 
-The above copyright notice and this permission notice shall be included in all
+PROHIBITED USES INCLUDE:
+    - Unauthorised surveillance, monitoring, or tracking of computer systems without explicit consent
+    - Malicious tampering with, or bypassing of, host security and file integrity controls
+    - Distribution without explicit warnings regarding its defensive and monitoring nature
+    - Cybercrime, illegal surveillance, or unauthorised access activities
+
+The above copyright notice, this permission notice and the security warnings shall be included in all
 copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. USERS ASSUME ALL LEGAL 
+RESPONSIBILITY AND LIABILITY FOR ANY MISUSE OF THIS SOFTWARE. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
