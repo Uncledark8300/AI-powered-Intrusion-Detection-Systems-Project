@@ -49,7 +49,7 @@ The system leverages the **XGBoost** algorithm, **n-gram** feature extraction, a
 | Data Processing & Visualisation | Pandas, NumPy, Matplotlib, Seaborn |
 | Utilities | Joblib (model serialization), Hashlib (SHA-256), JSON, Logging |
 | Testing Environment | VirtualBox / VMware (isolated testing) |
-| OS| Ubuntu
+| OS| Ubuntu, Windows
 
 ---
 ## Core Components
@@ -93,6 +93,60 @@ The GUI initialises and loads hids_config.json. The Dashboard shows the status o
 2. "Start ML Monitoring" periodically analyses system call sequences.
 3. Suspicious patterns generate ML Intrusion alerts with severity classification.
 ---
+##  Installation & Setup
+
+### Prerequisites
+- **Python 3.7** or higher
+- **Tkinter** (Usually included with standard Python installations. If missing on Linux, install via `sudo apt-get install python3-tk` or `sudo dnf install python3-tkinter`).
+
+### 1. Install Dependencies
+The application requires several libraries for machine learning, file monitoring, and data visualization. You can install them manually using pip:
+
+```bash
+pip install watchdog psutil scikit-learn xgboost imbalanced-learn joblib seaborn
+```
+> **Note:** You can also skip this step and run the script directly; the application will detect missing dependencies and prompt you to install them automatically.
+---
+### 2. Run the Application
+Navigate to the project directory and run the main script:
+```bash
+python "HIDS 19.1.1.py"
+```
+## Usage Guide
+Upon launching, you will be greeted by a tabbed Graphical User Interface (GUI). The system is designed to be cross-platform compatible (Windows and Ubuntu) and will automatically adjust default monitored system paths based on your OS.
+
+## 1. Dashboard
+The central hub for monitoring the system's security posture.
+- System Status: View the real-time state of File Monitoring, Baseline creation, ML Model loading, and System Integrity.
+- Quick Actions: One-click buttons to Start/Stop Monitoring, Create Baselines, Run Integrity Checks, and Train ML Models.
+  
+## 2. File Monitoring (FIM)
+This module uses the watchdog library and cryptographic hashing to detect unauthorized file changes.
+
+- Add/Remove Path: Specify which directories to protect (e.g., /etc, /bin, C:\Windows\System32).
+- Create Baseline: (Required First Step) Generates a secure JSON snapshot (baseline.json) of the hashes and metadata of all files in your monitored paths.
+- Start/Stop Monitoring: Activates real-time, event-driven monitoring. Any file creation, modification, or deletion in protected directories will trigger an immediate alert.
+- Run Integrity Check: Performs a manual, full-scan comparison of current files against the saved baseline to detect silent tampering.
+
+## 3. AI Detection (Machine Learning)
+Uses an XGBoost classification model and TF-IDF vectorization to analyze system call sequences and detect anomalous/malicious behavior.
+
+- Train ML Model: Provide a path to a dataset containing system call sequences (normal vs. attack).
+- Demo Mode: If no dataset is provided, the system will automatically generate a Demo Model using synthetic data so you can test the AI features immediately.
+
+- Load ML Model: Loads a previously trained model (ml_intrusion_model.pkl) from memory.
+- Test ML Detection: Runs a test sequence through the loaded model to verify anomaly detection.
+- Show Training Report: Displays the model's Precision, Recall, and F1-Score metrics.
+## 4. Security Alerts
+- Real-Time Alerts: Automatically pops up desktop notifications and switches tabs for Critical and High severity events.
+- Alert Management: View all triggered alerts (File Integrity violations or ML anomalies), clear the alert log, or export them to a .json file for auditing.
+## 5. System Logs
+A dedicated scrolling console that tracks all background activities, model training progress, file hashing events, and system errors in real-time.
+## 6. Settings
+- Hash Algorithm: Change the cryptographic algorithm used for file integrity (Default: SHA-256). 
+- Check Interval: Adjust the frequency (in seconds) for periodic background integrity scans.
+- Alert Threshold: Set the minimum severity level required to trigger desktop notifications and UI alerts.
+-  Save Settings: Persists your configuration to hids_config.json.
 ## Project Structure
 
 ```text
